@@ -1256,3 +1256,4 @@ def main():
   
 main()
 ```
+These scripts are written in python to insert and update data within a mongo db. Specifically these were created to work with the restful_api to work on its mongo db. This is a very important artifact for databases to show that I know how to create an interface for databases and then understanding databases as well. 
