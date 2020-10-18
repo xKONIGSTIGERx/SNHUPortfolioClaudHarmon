@@ -249,6 +249,10 @@ if __name__ == '__main__':
   run(host='localhost', port=8080)
 ```
 
+This artifact is from my CS-340 class earlier this yea (2020) and is a restful api to work with a database. This is an important piece of code to show my progress with
+working with different APIs to get the job done. This item was selected because it shows my ability to code from scratch and then apply that to another concept such as
+databases and MySQL or mongo. This also shows my ability to work with different programming languages like python when my main language is C++ or Java.
+
 ### Algorithms and Data Structure
 
 ```
@@ -1099,7 +1103,13 @@ game = Checkers()
 
 ### Databases
 
+```
 
+```
+
+### Personal Self-Assessment
+
+When I first started at Southern New Hampshire University I had experiance with programming either with games or even with robotics but what I achieved here allowed me to hone my skills and get some well needed project experiance. Before the program I was mainly just tinkering and playing around but even just these 3 projects I have shown have given me a ton of experiance that I will need going towards the future. 
 
 ### Support or Contact
 
