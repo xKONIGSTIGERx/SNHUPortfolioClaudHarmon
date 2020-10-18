@@ -1,40 +1,15 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/xKONIGSTIGERx/SNHUPortfolioClaudHarmon/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
 ### Personal Self-Assessment
 
-When I first started at Southern New Hampshire University I had experiance with programming either with games or even with robotics but what I achieved here allowed me to hone my skills and get some well needed project experiance. Before the program I was mainly just tinkering and playing around but even just these 3 projects I have shown have given me a ton of experiance that I will need going towards the future. 
+When I first started at Southern New Hampshire University I had experiance with programming either with games or even with robotics but what I achieved here allowed me to hone my skills and get some well needed project experiance. Before the program I was mainly just tinkering and playing around but even just these 3 projects I have shown have given me a ton of experiance that I will need going towards the future. Overall it has been a great experiance here at SNHU and even with the capstone to be able to look back and see all the progress I have made. It makes me excited to move into the future to whatever career I move into and hopefully gain some more needed experiance.
+
+For collaborating in a team enviroment I was able to get some key experiance when working either with members of my team on cyberpatriot, classwork, or even other projects online with people. Working together and communication is something that is very important when working in a company and I feel I have a ton of experiance in this area.
+For security everyone needs to understand how important it is especially when programming because you not only have your company to keep in good standing but also your consumers as well. You have to make sure your program is bug free by either extensive bug testing or doing code reviews with peers to make sure something catastrophic doesn't happen to possibly give someone access to whatever you have made. Thankfully I have had a ton of experiace with this either creating an editing projects to make sure they were up to standards or even participating in hackathons and cyberpatriot to get some first hand experiance in what these hackers are looking for. Another major thing about security is keeping up with it and making sure to go back and fix your own programs down the road if a new exploit is discovered.
 
 ### Code Review
 
 https://youtu.be/9byuzVa9r_g
+
+The video link above goes to a code review of the following projects of this portfolio. Code review is extremely important not only for you but your peers as well because we help and critque each other so that we all progress. This is something I have gotten some decent experiance with and am excited to get started in a more professional capacity.
 
 ### Software Design and Engineering
 
@@ -251,7 +226,7 @@ if __name__ == '__main__':
 
 This artifact is from my CS-340 class earlier this yea (2020) and is a restful api to work with a database. This is an important piece of code to show my progress with
 working with different APIs to get the job done. This item was selected because it shows my ability to code from scratch and then apply that to another concept such as
-databases and MySQL or mongo. This also shows my ability to work with different programming languages like python when my main language is C++ or Java.
+databases and MySQL or mongo. This also shows my ability to work with different programming languages like python when my main language is C++ or Java. Being able to be flexible with programming languages is very important because some languages can achieve things faster and more efficient than others. 
 
 ### Algorithms and Data Structure
 
@@ -1100,6 +1075,8 @@ def ExitGame(win):
     
 game = Checkers()
 ```
+
+This is a very good example of my experiance with algorithms and data structures being that it is from an articifical intelligence algorithm for playing checkers. I included this for two very good reasons. It shows my ability to fix and manage an already existing code base and shows my progress in reading someone elses code which I struggled with before coming to SNHU and getting some much needed practice. Being able to modify and manage an already existing code base is something I find very important for a programmer because that is something we will have to do a ton when we become professionals. Either with already created code or helping peers on a project we will always have to be reading others code. I learned some valuable lessons when I was working on this in class and then enhancing it for this portfolio. Taking already created code and editing it to make it better is a hard task mostly because it is not my code and you have to trace down issues and then implement fixes or changes altogehter. Overall I am happy with what I have produced.
 
 ### Databases
 
