@@ -1081,5 +1081,174 @@ This is a very good example of my experiance with algorithms and data structures
 ### Databases
 
 ```
+import json
+from bson import json_util
+from bson.json_util import dumps
+from pymongo import MongoClient
+connection = MongoClient('localhost', 27017)
+db = connection['market']
+collection = db['stocks']
 
+class Database:
+  
+  def check_document(self,ticker):
+    query = {"Ticker" : ticker}
+    result=collection.find_one(query)
+    print(dumps(result))
+  
+  def update_using_single_Ticker(self,query,new_update):
+    try:
+      collection.update_many(query,new_update)
+      result=collection.find(query)
+      print("*" * 50)
+      print(dumps(result))
+    except ValidationError as ve:
+      abort(400, str(ve))
+      
+  def update_using_Multiple_Ticker(self,file_name):
+    with open(file_name) as json_file:
+      for line in json_file:
+        ticker = line
+        volume = raw_input("New Volume For Ticker["+line+"]>")
+        query = {"Ticker" : ticker}
+        print("*" * 50)
+        print("Below Documents Will Be Updated...")
+        result=collection.find(query,{"Ticker":1,"Industry":1})
+        print(dumps(result))
+        new_update =  { "$set":{"Volume":volume}}
+        
+        try:
+          collection.update_many(query,new_update)
+          result=collection.find(query)
+          print("*" * 50)
+          print("Below Documents Have Been Updated...")
+          print(dumps(result))
+        except ValidationError as ve:
+          abort(400, str(ve))
+      
+      
+  def menu(self):
+    print("-----------------------")
+    print("0. Confirm Document(s)")
+    print("1. Update Using Multiple Tickers From File")
+    print("2. Update Using Single Ticker")
+    print("3. Quit")
+  
+
+def main():
+  
+  db = Database()
+  line = "--" * 50
+  print(line+"\n")
+  print("|")
+  print("|                   Update Documents Using Tickers          |")
+  print(line+"\n")
+  checker = True
+  while checker:
+    db.menu()
+    choice = raw_input("Enter Choice ~")
+    if choice == "1":
+      
+      file_name = raw_input("Enter File Name(Format e.g file_name.txt)")
+      db.update_using_Multiple_Ticker(file_name)
+      print(line+"\n\n")
+      
+    elif choice == "2":
+      ticker = raw_input("Enter Ticker Value:")
+      volume = raw_input("New Volume For Ticker["+ticker+"]>")
+      query = {"Ticker" : ticker}
+      print("*" * 50)
+      print("Below Documents Will Be Updated")
+      result=collection.find(query,{"Ticker":1,"Industry":1})
+      print(dumps(result))
+      
+      new_update =  { "$set":{"Volume":volume}}
+      db.update_using_single_Ticker(query,new_update)
+      
+    elif choice == "3":
+      print("Good Byeee")
+      checker = False
+      
+    elif choice == "0":
+      ticker = raw_input("Enter Ticker Value:")
+      db.check_document(ticker)
+      
+    else:
+      print("Invalid Choice")
+      
+  
+main()
+```
+
+```
+import json
+from bson import json_util
+from pymongo import MongoClient
+connection = MongoClient('localhost', 27017)
+db = connection['market']
+collection = db['stocks']
+
+class Database:
+  
+  def insert_from_file(self,file_name):
+    with open(file_name) as json_file:
+      
+      for line in json_file:
+        print(line)
+        line = json.loads(line)
+        try:
+          result = collection.insert(line)
+          print("New Data Inserted...")
+        except Exception as e:
+          print(str(e))
+    
+  def insert_new_document(self,document_data):
+    is_added = True
+    
+    try:
+      
+      result = collection.insert(document_data)
+      print("<< Thank You, Document Inserted >>")
+      
+    except Exception as e:
+      print(str(e))
+      is_added = False
+      
+    
+    return is_added
+  
+  def menu(self):
+    print("-----------------------")
+    print("1. Data From File")
+    print("2. Data Standard Input")
+    print("3. Quit")
+
+def main():
+  db = Database()
+  line = "--" * 50
+  print(line+"\n")
+  print("|")
+  print("|                   Inserting New Document Into Stocks Collection Market Database           |")
+  print(line+"\n")
+  checker = True
+  while checker:
+    db.menu()
+    choice = raw_input("Enter Choice ~")
+    if choice == "1":
+      file_name = raw_input("Enter File Name(Format e.g file_name.txt)")
+      db.insert_from_file(file_name)
+      print(line+"\n\n")
+    elif choice == "2":
+      new_document = raw_input("Enter Your Document:")
+      print("You Requested To Add This Docuument \n"+line)
+      print(new_document)
+      print (db.insert_new_document(json.loads(new_document)))
+      print(line+"\n\n")
+    elif choice == "3":
+      print("Good Byeee")
+      checker = False
+    else:
+      print("Invalid Choice")
+  
+main()
 ```
