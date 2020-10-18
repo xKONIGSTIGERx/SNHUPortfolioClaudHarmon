@@ -28,9 +28,9 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Personal Self-Assessment
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xKONIGSTIGERx/SNHUPortfolioClaudHarmon/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+When I first started at Southern New Hampshire University I had experiance with programming either with games or even with robotics but what I achieved here allowed me to hone my skills and get some well needed project experiance. Before the program I was mainly just tinkering and playing around but even just these 3 projects I have shown have given me a ton of experiance that I will need going towards the future. 
 
 ### Code Review
 
@@ -1106,11 +1106,3 @@ game = Checkers()
 ```
 
 ```
-
-### Personal Self-Assessment
-
-When I first started at Southern New Hampshire University I had experiance with programming either with games or even with robotics but what I achieved here allowed me to hone my skills and get some well needed project experiance. Before the program I was mainly just tinkering and playing around but even just these 3 projects I have shown have given me a ton of experiance that I will need going towards the future. 
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
